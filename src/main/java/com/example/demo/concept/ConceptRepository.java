@@ -166,7 +166,7 @@ public class ConceptRepository {
 			String queryString = "PREFIX ns:<" + OntologyManagerWithFusekiApplication.ns + ">" + "PREFIX rdf:<"
 					+ OntologyManagerWithFusekiApplication.rdf + ">" + "SELECT ?id " + "WHERE {"
 					+ "?Individuals rdf:type ns:Ontology." + "?Individuals ns:ontologyId \"" + myid + "\"."
-					+ "?Individuals ns:onthas ?y" + "." + "?x ns:id \"" + cid + "\"." + "?x ns:id ?id." + "}";
+					+ "?Individuals ns:onthas ?y" + "." + "?y ns:id \"" + cid + "\"." + "?y ns:id ?id." + "}";
 			String concpetID = null;
 			ResultSet results = OntologyManagerWithFusekiApplication
 					.execSelectAndProcess(OntologyManagerWithFusekiApplication.serviceURI, queryString);
